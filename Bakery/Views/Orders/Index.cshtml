@@ -1,0 +1,12 @@
+@using Bakery.Models;
+
+<h1>Orders</h1>
+
+<ul>
+    @foreach (Order order in Model)
+    {
+        <li><a href="/orders/@order.Id">@order.Description</a></li>
+    }
+</ul>
+
+<a href="/orders/new">Add another order</a>
