@@ -4,15 +4,19 @@ namespace Bakery.Models
 {
     public class Vendor
     {
+       public static List<Vendor> _vendors = new List<Vendor> {} ;
        public string Name { get; set; }
        public string Description { get; set; }
-       public static List<Order> orders = new List<Order> { } ;  
-
-       public Vendor(string name, string description)
+       public int Id { get; set; }
+       public List<Order> Orders { get; set; }
+         
+       public Vendor(string vendorName, string description)
        {
-           Name = name;
+           Name = vendorName;
            Description = description;
-           // Need to add Order List in the constructor 
+           _vendors.Add(this);
+           Id = _vendors.Count;
+           Orders = new List<Order>{};
        }
 
 

@@ -7,10 +7,26 @@ namespace Bakery.Controllers
 {
     public class VendorsController : Controller
     {
-        [HttpGet("/vendors/new")]
+        [HttpGet("/vendors")]
         public ActionResult Index()
         {
             return View();
         }
+
+        [HttpGet("/vendors/new")]
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        [HttpPost("/vendors")]
+        public ActionResult Create(string name, string description)
+        {
+            Vendor newVendor = new Vendor(name, description);
+            return RedirectToAction("Index");
+        }
+       
+    
+
     }
 }
