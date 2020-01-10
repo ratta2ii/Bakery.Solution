@@ -18,6 +18,11 @@ namespace Bakery.Models
            Id = _vendors.Count;
            Orders = new List<Order>{};
        }
+       
+       public static List<Vendor> GetAll()
+       {
+           return _vendors;
+       }
 
 
     }

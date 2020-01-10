@@ -2,4 +2,9 @@
 
 <h1>Vendors</h1>
 
+@foreach(Vendor vendor in Model)
+{
+    <h4><a href="/vendors/@vendor.Id">@vendor.Name</a></h4>
+}
+
 <p><a href="/vendors/new">Add a new Vendor</a></p>
