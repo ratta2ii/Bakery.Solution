@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Bakery.Models;
+namespace Bakery.Models
 {
     public class Order
     {
@@ -17,4 +17,5 @@ namespace Bakery.Models;
           // Add date to the constructor, and a date argument
       }
     }
+
 }
