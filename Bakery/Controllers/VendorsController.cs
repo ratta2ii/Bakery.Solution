@@ -38,7 +38,6 @@ namespace Bakery.Controllers
             model.Add("vendor", selectedVendor);
             model.Add("orders", vendorOrders);
             return View(model);
-
         }       
     
 
