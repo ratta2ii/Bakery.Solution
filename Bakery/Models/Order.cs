@@ -8,12 +8,18 @@ namespace Bakery.Models
       public string Description { get; set; }
       public float Price { get; set; }
 
-      // Create a date field to go into the constructor 
+      // Add a Date field here 
+
+      public int Id { get; }
+      private static List<Order> _orders = new List<Order> {};
+
       public Order(string title, string description, float price)
       {
           Title = title;
           Description = description;
           Price = price;
+          _orders.Add(this);
+          Id = _orders.Count;
           // Add date to the constructor, and a date argument
       }
     }
