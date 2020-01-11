@@ -7,6 +7,7 @@ namespace Bakery.Controllers
 {
     public class VendorsController : Controller
     {
+
         [HttpGet("/vendors")]
         public ActionResult Index()
         {
@@ -29,6 +30,7 @@ namespace Bakery.Controllers
             return Redirect("/");
         }
 
+
         [HttpGet("/vendors/{id}")]
         public ActionResult Show(int id)
         {
@@ -39,6 +41,7 @@ namespace Bakery.Controllers
             model.Add("orders", vendorOrders);
             return View(model);
         }
+
 
         [HttpPost("/vendors/{vendorId}/orders")]
         public ActionResult Create(int vendorId, string title, string description, float price)
@@ -53,6 +56,5 @@ namespace Bakery.Controllers
             return View("Show", model);
         }       
     
-
     }
 }

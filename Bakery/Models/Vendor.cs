@@ -34,6 +34,5 @@ namespace Bakery.Models
            Orders.Add(order);
        }
 
-
     }
 }

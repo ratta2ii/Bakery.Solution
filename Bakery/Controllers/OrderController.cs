@@ -25,6 +25,5 @@ namespace Bakery.Controllers
             return View(model);
         }
         
-
     }
 }
