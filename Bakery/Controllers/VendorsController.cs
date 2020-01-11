@@ -38,6 +38,19 @@ namespace Bakery.Controllers
             model.Add("vendor", selectedVendor);
             model.Add("orders", vendorOrders);
             return View(model);
+        }
+
+        [HttpPost("/vendors/{vendorId}/orders")]
+        public ActionResult Create(int vendorId, string title, string description, float price)
+        {
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            Vendor vendorLocated = Vendor.Find(vendorId);
+            Order newOrder = new Order(title, description, price);
+            vendorLocated.AddOrder(newOrder);
+            List<Order> vendorOrders = vendorLocated.Orders;
+            model.Add("orders", vendorOrders);
+            model.Add("vendor", vendorLocated);
+            return View("Show", model);
         }       
     
 

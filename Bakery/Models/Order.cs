@@ -22,6 +22,16 @@ namespace Bakery.Models
           Id = _orders.Count;
           // Add date to the constructor, and a date argument
       }
-    }
 
+      public static Order Find(int searchId)
+      {
+        return _orders[searchId- 1];
+      }
+
+      public static List<Order> GetAll()
+      {
+        return _orders;
+      }
+
+    }
 }

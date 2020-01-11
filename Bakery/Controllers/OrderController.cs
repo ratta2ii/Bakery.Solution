@@ -14,14 +14,16 @@ namespace Bakery.Controllers
             return View(vendor);   
         }
 
-        [HttpGet("/orders")]
-        public ActionResult Index()
+        [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+        public ActionResult Show(int vendorId, int orderId)
         {
-            return View();
+            Order order = Order.Find(orderId);
+            Vendor vendor = Vendor.Find(vendorId);
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("vendor", vendor);
+            model.Add("order", order);
+            return View(model);
         }
-
-        // [HttpGet("/vendors/@Model["vendor"].Id/orders/{orderId}.")]
-        // public ActionResult
         
 
     }
