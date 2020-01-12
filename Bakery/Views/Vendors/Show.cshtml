@@ -1,14 +1,54 @@
-@using Bakery.Models;
+@{
+  Layout = "_Layout";
+}
+ <link rel="stylesheet" type="text/css" href="~/css/VendorsShow.css" />
+ @using Bakery.Models;
 
-<h3>Here are the Orders for @Model["vendor"].Name</h3>    
+ <div class="container">
+  
+  <h1>Orders for @Model["vendor"].Name</h1> 
 
-<ol>
+  @if (@Model["orders"].Count >= 1)
+  {
+    <table class="blueTable">
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Order Title</th>
+      </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+
     @foreach (Order order in @Model["orders"])
     {
-        <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description </a> @order.Date</li>
+    
+      <tr>
+        <td>wa# @order.Id</td>
+        <td><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title </a></td>
+      </tr> 
     }
-</ol>
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another Order</a></p>
-<p><a href="/vendors">Return to Vendor List</a></p>
-<p><a href="/">Return to Homepage</a></p>
+    </tbody>
+    </table>  
+  }
+  
+  
+  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add Order</a></p>
+  <p><a href="/vendors">Return to Vendors</a></p>
+  <p><a href="/">Return to Homepage</a></p>
+  
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

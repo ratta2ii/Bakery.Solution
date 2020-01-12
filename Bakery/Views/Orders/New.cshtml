@@ -1,11 +1,32 @@
-<h1>Create a new Order for @Model.Name</h1>
+@{
+  Layout = "_Layout";
+}
 
-<form action="/vendors/@Model.Id/orders" method="post">
-  <label for="title">Enter Title: </label>
-  <input id="title" name="title" type="text">
-  <label for="description">Enter a Description: </label>
-  <input id="description" name="description" type="text">
-  <label for="price">Enter Price: </label>
-  <input id="price" name="price" type="number">  
-  <button type="submit">Add</button>
-</form>
+ <div class="container">
+
+  <h1>Add new Order</h1>
+  
+  <div id="order-form" class="card">
+      @* <h2>Order Form</h2> *@
+      <form action="/vendors/@Model.Id/orders" method="post">
+      @* <label for="title">Enter Title:   </label> *@
+      Enter a title:<br>
+      <input id="title" name="title" type="text">
+      <br>
+      @* <label for="description">Description: </label> *@
+      Enter a Description:<br>
+      <input id="description" name="description" type="text">
+      <br>
+      @* <label for="price">Enter Price: </label> *@
+      Enter a Price:<br>
+      <input id="price" name="price" type="text">  
+      <br>
+      <button id="order-form-button" type="submit" class="btn btn-success">Add</button>
+    </form>
+    
+  </div>
+
+ 
+
+ </div>
+

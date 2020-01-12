@@ -1,12 +1,27 @@
-<h1>Add a new Vendor</h1>
+@{
+  Layout = "_Layout";
+}
 
-<form action="/vendors" method="post">
-  <label for="name">Enter Vendor name: </label>
-  <input id="name" name="name" type="text">
-  <label for="description">Enter a Description: </label>
-  <input id="description" name="description" type="text">
-  <button type="submit">Add</button>
-</form>
+ <div class="container">
 
-<p><a href="/">Back to Homepage</a></p>
-<p><a href="/vendors">Back to Vendors</a></p>
+  <h1>Add new Vendor</h1>
+
+  <div id="vendor-form" class="card">
+
+    <form action="/vendors" method="post">
+      Enter Vendor name:<br>
+      <input id="name" name="name" type="text">
+      <br>
+      Enter a Description:<br>
+      <input id="description" name="description" type="text">
+      <br>
+      <button type="submit" class="btn btn-success">Add</button>
+    </form>
+
+  </div>
+  
+    <p><a href="/">Back to Homepage</a></p>
+    <p><a href="/vendors">Back to Vendors</a></p>
+
+ </div>
+

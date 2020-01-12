@@ -1,15 +1,46 @@
+@{
+  Layout = "_Layout";
+}
+ <link rel="stylesheet" type="text/css" href="~/css/VendorsShow.css" />
 @using Bakery.Models;
 
-<h1>Vendors</h1>
+<div class="container">
+  
+  <h1>Vendors</h1>
 
-@if (@Model.Count == 0)
-{
-    <h4>You have no Vendors at this time.</h4>
-}
+  @if (@Model.Count == 0)
+  {
+      <h4>You have no Vendors at this time.</h4>
+  }
 
-@foreach(Vendor vendor in Model)
-{
-    <h4><a href="/vendors/@vendor.Id">@vendor.Name</a></h4>
-}
+  <table class="blueTable">
+    <thead>
+      <tr>
+        <th>Vendors</th>
+      </tr>
+    </thead>
+    <tfoot>
+    </tfoot>
+  <tbody>
+  
+    @foreach(Vendor vendor in Model)
+    {
+        <tr>
+          <td><a href="/vendors/@vendor.Id">@vendor.Name</a></td>
+        </tr>
+        
+    }
+    
+  </tbody>
+</table>
 
-<p><a href="/vendors/new">Add a new Vendor</a></p>
+  <p><a href="/vendors/new">Add a new Vendor</a></p>
+
+</div>
+
+
+
+
+
+
+

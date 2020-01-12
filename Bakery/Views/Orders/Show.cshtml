@@ -1,6 +1,43 @@
-<h1>Order Details for @Model["vendor"].Name</h1>
+@{
+  Layout = "_Layout";
+}
+ <link rel="stylesheet" type="text/css" href="~/css/VendorsShow.css" />
 
-<h3>@Model["order"].Title</h3>
- 
- <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
- <p><a href='/vendors'>View all Orders</a></p>
+<div class="container">
+
+  <h1>@Model["vendor"].Name Order Details</h1>
+
+  <table class="blueTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Price</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+  <tr>
+  </td>
+  </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+        <td>@Model["order"].Title</td>
+        <td>@Model["order"].Description</td>
+        <td>@Model["order"].Date</td>
+        <td>$ @Model["order"].Price</td>
+        <td>#@Model["order"].Id</td>
+    </tr> 
+  </tbody>
+  </tr>
+  </table>
+
+  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+  <p><a href='/vendors/@Model["vendor"].Id'>View all Orders</a></p>
+  
+ </div>
+
