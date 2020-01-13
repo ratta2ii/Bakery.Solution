@@ -4,7 +4,7 @@
 
 ### **Description**
 
-_This is a server side application built in C# using ASP.Net Core MVC. The application is for a Bakery owner to keep track of his Vendors and their orders. The application uses 2 separate classes; One class to add new Vendors, and one class to add new Orders to a specific Vendor. When a user runs the application they should be welcomed on a splash page and given a link to look at their Vendors. Fromm here, the user should be able to add a new vendor, or click on a Vendor in order to view that specific Vendors order. From the list Orders, a user then click on a specific Order to view further details.
+_This is a server side application built in C# using ASP.Net Core MVC. The application is for a Bakery owner to keep track of his Vendors and their orders. The application uses 2 separate classes; One class to add new Vendors, and one class to add new Orders to a specific Vendor. When a user runs the application they should be welcomed on a splash page and given a link to look at their Vendors. From here, the user should be able to add a new vendor, or click on a Vendor in order to view that specific Vendors order. From the list Orders, a user then click on a specific Order to view further details._
 #
 
 #
