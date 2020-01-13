@@ -1,5 +1,6 @@
 body {
-  background-color: #d4e6f6;
+  background-color: rgb(60, 115, 145);
+  background: url('../../img/white-paper-bg.jpg');
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -20,24 +21,30 @@ h1 {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  margin: 110px 0 40px 0;
+  margin: 110px 0 50px 0;
 }
 
 h2 {
   margin-bottom: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 50px;
-}
-
-#order-form {
-  background-color: cornflowerblue;
-  padding: 30px 100px;
-  margin-bottom: 20px;
+  font-size: 40px;
 }
 
 #vendor-form {
-  background-color: cornflowerblue;
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
   padding: 20px 15%;
+  margin-bottom: 20px;
+}
+
+#order-form {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  padding: 30px 100px;
   margin-bottom: 20px;
 }
 
@@ -47,5 +54,74 @@ input {
 }
 
 #order-form-button {
-  
+   margin-top: 15px; 
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* ----------------Table styling below -----------------*/
+
+
+table.blueTable {
+  border: 8px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 10px 8px;
+}
+
+table.blueTable tbody td {
+  font-size: 20px;
+}
+
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+
+table.blueTable thead th {
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
 }
